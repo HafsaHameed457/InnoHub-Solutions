@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { includes } from "lodash";
 import styled from "styled-components";
-import { H3, H4 } from "../helpers/GeneralComponents.styled";
+import { H3 } from "../helpers/GeneralComponents.styled";
 import InputText from "./InputText";
 import TextArea from "./TextArea";
 interface InputProps {

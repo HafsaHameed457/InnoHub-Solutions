@@ -1,6 +1,6 @@
 import React from "react";
 
-const Icon: React.FC<any> = ({ icon, props }) => {
+const Icon: React.FC<any> = ({ icon, ...props }) => {
   switch (icon) {
     case "chevronLeft":
       return (

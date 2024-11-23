@@ -1,8 +1,8 @@
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import "./App.css";
 import { MyDiv } from "./App.styled";
 import Home from "./components/Home/Home";
 import Navbar from "./components/Navbar/Navbar";
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 function App() {
   return (
     <Router>

@@ -9,8 +9,8 @@ const navLinks = [
     ref: "/",
   },
   {
-    title: "Solution",
-    ref: "/solution",
+    title: "Solutions",
+    ref: "/solutions",
   },
   {
     title: "Insights",

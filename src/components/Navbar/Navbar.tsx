@@ -23,10 +23,7 @@ const navLinks = [
   },
 ];
 const Navbar: React.FC = () => {
-  const [drawerVisible, setDrawerVisible] = useState(false);
   const [sticky, setSticky] = useState(false);
-
-  // Check for mobile screen width (max-width 950px)
   const isMobile = useMediaQuery("(max-width: 950px)");
 
   const handleScroll = () => {

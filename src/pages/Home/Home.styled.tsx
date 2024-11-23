@@ -44,7 +44,8 @@ export const ParallaxContainer: React.FC<any> = styled.div`
     width: 100%;
   }
   overflow: hidden;
-  transition: opacity 1s ease-in-out; /* Fade-in effect */
+  transition: ${(props: { fadeIn: boolean }) =>
+    props.fadeIn ? "opacity 1s ease-in-out" : "none"};
   opacity: ${(props: { fadeIn: boolean }) => (props.fadeIn ? 1 : 0)};
   background-image: url(${(props: { backgroundImage: string }) =>
     props.backgroundImage});

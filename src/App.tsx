@@ -1,12 +1,13 @@
-import BackgroundImage from "./assets/background.jpg";
-
 import "./App.css";
 import { MyDiv } from "./App.styled";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   return (
     <>
-      <MyDiv>aaa</MyDiv>
+      <MyDiv>
+        <Navbar />
+      </MyDiv>
     </>
   );
 }

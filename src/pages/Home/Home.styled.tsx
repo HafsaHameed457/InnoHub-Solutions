@@ -7,6 +7,8 @@ export const HomeContainer = styled.div`
   justify-content: center;
   padding: 0 0vw;
   margin-top: 60px;
+  margin-bottom: 60px;
+
   height: 80vh;
   position: relative;
   z-index: 1;

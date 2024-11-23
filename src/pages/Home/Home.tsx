@@ -1,8 +1,12 @@
 import { Content, HomeContainer, ParallaxContainer } from "./Home.styled";
 import HomeImg from "../../assets/home.jpg";
 import { useEffect, useState } from "react";
-import { H2, H4, StyledButton } from "../helpers/GeneralComponents.styled";
-import useMediaQuery from "../helpers/MediaQuery";
+import {
+  H2,
+  H4,
+  StyledButton,
+} from "../../components/helpers/GeneralComponents.styled";
+import useMediaQuery from "../../components/helpers/MediaQuery";
 
 const Home = () => {
   const [fadeIn, setFadeIn] = useState(false);

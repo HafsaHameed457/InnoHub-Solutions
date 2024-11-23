@@ -1,5 +1,10 @@
 import { useEffect, useState } from "react";
-import { H2, H3, H4 } from "../../components/helpers/GeneralComponents.styled";
+import {
+  BodyTextBold,
+  H2,
+  H3,
+  H4,
+} from "../../components/helpers/GeneralComponents.styled";
 import useMediaQuery from "../../components/helpers/MediaQuery";
 import SectionLoader from "../../components/SectionLoader/SectionLoader";
 import { InsightContainer, OuterContainer } from "./Insights.styled";
@@ -54,6 +59,9 @@ const Insights = () => {
                 {Capitalize(article.title)}
               </H3>
               <H4>{Capitalize(article.body)}</H4>
+              <BodyTextBold className="!italic">
+                Read more <span>&#8594;</span>
+              </BodyTextBold>
             </InsightContainer>
           ))}
         </>

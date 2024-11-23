@@ -1,59 +1,55 @@
-import { useState, useEffect } from "react";
-
+import BgImg from "../../assets/background.jpg";
 import Logo from "../../assets/logo.svg"; // Update path as necessary
-import { NavLink, NavbarContainer } from "./Navbar.styled";
+import useRouter from "../../hooks/useRouter";
+import { StyledButton } from "../helpers/GeneralComponents.styled";
 import useMediaQuery from "../helpers/MediaQuery";
-
+import { NavLink, NavbarContainer } from "./Navbar.styled";
 const navLinks = [
   {
     title: "Home",
-    ref: "#home",
+    ref: "/",
   },
   {
     title: "Solution",
-    ref: "#solution",
+    ref: "/solution",
   },
   {
     title: "Insights",
-    ref: "#insights",
+    ref: "/insights",
   },
   {
     title: "Contact",
-    ref: "#contact",
+    ref: "/contact",
   },
 ];
 const Navbar: React.FC = () => {
-  const [sticky, setSticky] = useState(false);
-  const isMobile = useMediaQuery("(max-width: 950px)");
-
-  const handleScroll = () => {
-    const offset = window.scrollY;
-    if (offset > 0) {
-      setSticky(true);
-    } else {
-      setSticky(false);
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll); // Cleanup scroll event
-    };
-  }, []);
+  const router = useRouter();
+  const isMobile = useMediaQuery("(max-width: 750px)");
 
   return (
     <NavbarContainer
       style={{
-        position: sticky ? "fixed" : "static",
+        position: "sticky",
+        top: 0,
+        left: 0,
         flexDirection: isMobile ? "column" : "row",
+        zIndex: 100,
       }}
+      backgroundImage={BgImg}
     >
-      <a href="/" aria-label="Go to home">
-        <img src={Logo} alt="Logo" width={"100%"} />
-      </a>
+      <a onClick={() => router.navigate("/")}></a>
+      <img src={Logo} alt="Logo" />
+
       {!isMobile && (
-        <div style={{ display: "flex", gap: "3vw" }}>
+        <div
+          style={{
+            display: "flex",
+            gap: "2vw",
+            flex: 1,
+            marginLeft: "5vw",
+            marginTop: !isMobile ? "1rem" : "0",
+          }}
+        >
           {navLinks.map((link, index) => (
             <NavLink key={index} href={link.ref}>
               {link.title}
@@ -79,6 +75,17 @@ const Navbar: React.FC = () => {
           </div>
         </>
       )}
+      <StyledButton
+        style={{
+          marginLeft: !isMobile ? "1rem" : "0",
+          marginTop: !isMobile ? "0" : "1rem",
+          fontSize: isMobile ? "14px" : "16px",
+          width: isMobile ? "300px" : "auto",
+          padding: isMobile ? "10px 20px" : "10px 20px",
+        }}
+      >
+        Join us
+      </StyledButton>
     </NavbarContainer>
   );
 };

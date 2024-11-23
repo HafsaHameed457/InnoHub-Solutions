@@ -1,4 +1,3 @@
-import BgImg from "../../assets/background.jpg";
 import Logo from "../../assets/logo.svg"; // Update path as necessary
 import useRouter from "../../hooks/useRouter";
 import { StyledButton } from "../helpers/GeneralComponents.styled";

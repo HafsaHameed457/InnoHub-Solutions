@@ -124,7 +124,7 @@ const Solution = () => {
         })}
         <div className="mx-3">
           <button
-            onClick={prevCard}
+            onClick={nextCard}
             className="bg-white p-2 border-2 border-black rounded-full text-black text-[20px] font-bold"
           >
             <Icon icon="chevronRight" />

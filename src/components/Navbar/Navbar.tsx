@@ -35,7 +35,6 @@ const Navbar: React.FC = () => {
         flexDirection: isMobile ? "column" : "row",
         zIndex: 100,
       }}
-      backgroundImage={BgImg}
     >
       <a onClick={() => router.navigate("/")}></a>
       <img src={Logo} alt="Logo" />

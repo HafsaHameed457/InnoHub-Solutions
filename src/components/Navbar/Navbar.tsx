@@ -10,11 +10,11 @@ const navLinks = [
   },
   {
     title: "Solutions",
-    ref: "/solutions",
+    ref: "/solution",
   },
   {
     title: "Insights",
-    ref: "/insights",
+    ref: "/insight",
   },
   {
     title: "Contact",

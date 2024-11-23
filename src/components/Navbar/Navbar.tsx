@@ -1,4 +1,3 @@
-import BgImg from "../../assets/background.jpg";
 import Logo from "../../assets/logo.svg"; // Update path as necessary
 import useRouter from "../../hooks/useRouter";
 import { StyledButton } from "../helpers/GeneralComponents.styled";
@@ -10,8 +9,8 @@ const navLinks = [
     ref: "/",
   },
   {
-    title: "Solution",
-    ref: "/solution",
+    title: "Solutions",
+    ref: "/solutions",
   },
   {
     title: "Insights",
@@ -35,7 +34,6 @@ const Navbar: React.FC = () => {
         flexDirection: isMobile ? "column" : "row",
         zIndex: 100,
       }}
-      backgroundImage={BgImg}
     >
       <a onClick={() => router.navigate("/")}></a>
       <img src={Logo} alt="Logo" />

@@ -57,3 +57,32 @@ export const H4 = styled.h4`
   line-height: 30px;
   font-family: "Inter", sans-serif !important;
 `;
+export const H6 = styled.h6`
+  color: #19124f;
+
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  font-family: "Inter", sans-serif !important;
+`;
+
+export const BodyText = styled.p`
+  color: #19124f;
+
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  font-family: "Inter", sans-serif !important;
+`;
+
+export const BodyTextBold = styled.p`
+  color: #19124f;
+
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+  font-family: "Inter", sans-serif !important;
+`;

@@ -1,7 +1,10 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-export const inputStyles = `
-   border: 1px solid ${({ error = false }) => (error ? "#ed3432" : "#d6dadf")};
+export const errorBorder = css<{ error?: boolean }>`
+  border: 1px solid ${({ error = false }) => (error ? "#ed3432" : "#d6dadf")};
+`;
+export const inputStyles = css`
+  border: 1px solid #d6dadf;
   border-radius: 8px;
   font-size: 13px;
   outline: none;
@@ -11,10 +14,6 @@ export const inputStyles = `
 
   &:focus {
     border-color: #a397e1;
-  }
-
-  &.noBorder {
-    border: none;
   }
 
   &.sm {
@@ -42,8 +41,10 @@ export const inputStyles = `
 
 export const InputTextField: React.FC<any> = styled.input`
   ${inputStyles};
+  ${errorBorder};
 `;
 
 export const TextArea: React.FC<any> = styled.textarea`
   ${inputStyles};
+  ${errorBorder};
 `;

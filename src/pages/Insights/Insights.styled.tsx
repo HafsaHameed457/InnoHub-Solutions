@@ -19,6 +19,7 @@ export const OuterContainer = styled.div`
   gap: 2vw;
   padding: 0 0vw;
   margin-top: 60px;
+  margin-bottom: 60px;
   height: 80vh;
   position: relative;
   z-index: 1;

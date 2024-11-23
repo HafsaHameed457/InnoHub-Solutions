@@ -1,9 +1,9 @@
 import clsx from "clsx";
+import { includes } from "lodash";
+import styled from "styled-components";
+import { H3, H4 } from "../helpers/GeneralComponents.styled";
 import InputText from "./InputText";
 import TextArea from "./TextArea";
-import styled from "styled-components";
-import { BodyText } from "../helpers/GeneralComponents.styled";
-import { includes } from "lodash";
 interface InputProps {
   className?: string;
   label?: string;
@@ -91,7 +91,7 @@ const PrimaryInput: React.FC<InputProps> = ({
     <Container className="">
       {label && !includes(["switch", "checkbox"], type) && (
         <div className="flex w-full">
-          <BodyText className=" pb-1">{label}</BodyText>
+          <H3 className=" pb-1">{label}</H3>
         </div>
       )}
       <InputContainer className="outer">

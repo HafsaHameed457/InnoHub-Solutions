@@ -59,7 +59,7 @@ const Insights = () => {
                 {Capitalize(article.title)}
               </H3>
               <H4>{Capitalize(article.body)}</H4>
-              <BodyTextBold className="!italic">
+              <BodyTextBold className="!italic !cursor-pointer">
                 Read more <span>&#8594;</span>
               </BodyTextBold>
             </InsightContainer>

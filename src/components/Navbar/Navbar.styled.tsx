@@ -7,29 +7,10 @@ export const NavbarContainer: React.FC<any> = styled.div`
 
   padding: 0 5rem;
   align-items: center;
-  @media (max-width: 768px) {
-    padding: 20px;
-    height: auto;
-  }
-  @media (max-width: 480px) {
-    padding: 10px;
-    height: auto;
-  }
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(
-      255,
-      255,
-      255,
-      0.5
-    ); /* White color with 50% opacity */
-    z-index: -1;
-  }
+
+  background: white;
+  border: none;
+  border-radius: 100px;
 `;
 
 export const NavLink = styled.a`

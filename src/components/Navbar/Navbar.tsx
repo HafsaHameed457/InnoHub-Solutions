@@ -1,4 +1,9 @@
-import Logo from "../../assets/logo.svg"; // Update path as necessary
+import Logo from "../../assets/logo.svg";
+import Home from "../../assets/home.svg";
+import Paitent from "../../assets/group.svg";
+import Schedule from "../../assets/calendar.svg";
+import Messages from "../../assets/chat.svg";
+import Transaction from "../../assets/credit.svg";
 import useRouter from "../../hooks/useRouter";
 import { StyledButton } from "../helpers/GeneralComponents.styled";
 import useMediaQuery from "../helpers/MediaQuery";
@@ -7,18 +12,27 @@ const navLinks = [
   {
     title: "Home",
     ref: "/",
+    icon: Home,
   },
   {
-    title: "Solutions",
-    ref: "/solution",
+    title: "Paitent",
+    icon: Paitent,
+    ref: "/",
   },
   {
-    title: "Insights",
-    ref: "/insight",
+    title: "Schedule",
+    ref: "/",
+    icon: Schedule,
   },
   {
-    title: "Contact",
-    ref: "/contact",
+    title: "Messages",
+    ref: "/",
+    icon: Messages,
+  },
+  {
+    title: "Transaction",
+    ref: "/",
+    icon: Transaction,
   },
 ];
 const Navbar: React.FC = () => {
@@ -49,9 +63,12 @@ const Navbar: React.FC = () => {
           }}
         >
           {navLinks.map((link, index) => (
-            <NavLink key={index} href={link.ref}>
-              {link.title}
-            </NavLink>
+            <div className="flex gap-3">
+              <img src={link.icon} alt={link.title} />
+              <NavLink key={index} href={link.ref}>
+                {link.title}
+              </NavLink>
+            </div>
           ))}
         </div>
       )}
@@ -66,9 +83,12 @@ const Navbar: React.FC = () => {
             }}
           >
             {navLinks.map((link, index) => (
-              <NavLink key={index} href={link.ref}>
-                {link.title}
-              </NavLink>
+              <>
+                <img src={link.icon} alt={link.title} />
+                <NavLink key={index} href={link.ref}>
+                  {link.title}
+                </NavLink>
+              </>
             ))}
           </div>
         </>
